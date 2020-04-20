@@ -6,7 +6,7 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
-/** Initializes everything, clears the screen, draws "hello" and a square */
+/** Initializes everything, clears the screen, draws triangle */
 int
 main()
 {
@@ -20,9 +20,9 @@ main()
   
   // generate a triangle
   for (j = 0; j < 15; j++) {
-      drawPixel(0, j, COLOR_GREEN);
-      drawPixel(j, j, COLOR_GREEN);
-      drawPixel(j, 15, COLOR_GREEN);
+      drawPixel(0, j, COLOR_ORANGE);
+      drawPixel(j, j, COLOR_ORANGE);
+      drawPixel(j, 15, COLOR_ORANGE);
   }
 }
  
