@@ -39,12 +39,14 @@ void switch_interrupt_handler(){
   if (!(p2val  & switch1_state_down)) { // see state machine and led code for toggle red when button is pressed
     tempo = 30;
     song1();
-    drawString5x7(20,20, "mario", COLOR_GREEN, COLOR_RED);
+    clearScreen(COLOR_RED);
+    drawString5x7(20,20, "mario", COLOR_WHITE, COLOR_RED);
     switch_state_changed = 1;
   } else if (!(p2val & switch2_state_down)) { // see state machine assembly and led code for toggle green when button is pressed
     tempo = 30;
     song2();
-    drawString5x7(20,20, "luigi", COLOR_GREEN, COLOR_RED);
+    clearScreen(COLOR_GREEN);
+    drawString5x7(20,20, "luigi", COLOR_WHITE, COLOR_GREEN);
     switch_state_changed = 2;
   } else if (!(p2val & switch3_state_down)) { // see state machine assembly and led code for toggle both when button is pressed
     tempo = 30;
