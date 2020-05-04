@@ -18,7 +18,7 @@ void __interrupt_vec(WDT_VECTOR) WDT(){
     int repeat = 1;
     while(repeat <= 5){
       int cnt = 0;
-      while(cnt < 30000){
+      while(cnt < 20000){
 	cnt++;
       }
       repeat++;

@@ -115,3 +115,53 @@ void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
   fillRectangle(colMin + width, rowMin, 1, height, colorBGR);
 }
 
+/**
+ * Draw diamond inside of square.
+ * 
+ * \param size Size of triangle
+ * \param colorBGR Color of triangle in BGR
+ */
+void drawTriangle(u_char size, u_int colorBGR) {
+    for (u_char r = 0; r<= size; r++) {    
+        u_char colLeft = size-r;
+        u_char colRight = size;
+        for (u_char c = colLeft; c <= colRight; c++) {
+            drawPixel(c+ 10, r+30, colorBGR);
+        }
+    }        
+}
+
+/**
+ * Draw diamond inside of square.
+ * 
+ * \param colMin Column start
+ * \param rowMin Row start 
+ * \param size Size of shape
+ * \param colorBGR Color of shape in BGR
+ */
+void drawDiamondInsideSquare(u_char colMin, u_char rowMin, u_char size, u_int colorBGR) {
+    for (u_char r = 0; r <= size; r++) {
+        u_char colLeft = size - r;
+        u_char colRight = size;
+        for (u_char c = colLeft; c <= colRight; c++) {
+            drawPixel(colMin+c, rowMin+r, colorBGR);
+            drawPixel(colMin-c, rowMin+r, colorBGR);
+            drawPixel(colMin+c, rowMin-r, colorBGR);
+            drawPixel(colMin-c, rowMin-r , colorBGR);
+        }
+    }
+}
+
+void trapezoid(u_char colMin, u_char rowMin, u_int colorBGR) {
+    for (u_char i = 0; i < 10; i++) { // rows
+        // rectangle
+        for (u_char k = 0; k < 20; k++) {
+            drawPixel(11+k+colMin, rowMin+i, colorBGR);
+        }
+        // triangles
+        for (int j = 0; j<i; j++) {
+            drawPixel(10-j+colMin, rowMin+i, colorBGR); // left triangle
+            drawPixel(31+j+colMin, rowMin+i, colorBGR); // right triangle
+        }
+    }
+}

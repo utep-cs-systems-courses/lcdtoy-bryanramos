@@ -63,3 +63,24 @@ void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
 #endif // included
 
 
+/**
+ * Draw diamond inside of square.
+ * 
+ * \param size Size of triangle
+ * \param colorBGR Color of triangle in BGR
+ */
+void drawTriangle(u_char size, u_int colorBGR);
+
+/**
+ * Draw diamond inside of square.
+ * 
+ * \param colMin Column start
+ * \param rowMin Row start 
+ * \param size Size of shape
+ * \param colorBGR Color of shape in BGR
+ */
+void drawDiamondInsideSquare(u_char colMin, u_char rowMin, u_char size, u_int colorBGR);
+
+void trapezoid(u_char colMin, u_char rowMin, u_int colorBGR);
+
+
