@@ -152,6 +152,14 @@ void drawDiamondInsideSquare(u_char colMin, u_char rowMin, u_char size, u_int co
     }
 }
 
+/**
+ * Draw trapezoid
+ * 
+ * \param colMin Column start
+ * \param rowMin Row start 
+ * \param colorBGR Color of shape in BGR
+ * 
+ */
 void trapezoid(u_char colMin, u_char rowMin, u_int colorBGR) {
     for (u_char i = 0; i < 10; i++) { // rows
         // rectangle

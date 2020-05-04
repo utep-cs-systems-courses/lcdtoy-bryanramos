@@ -81,6 +81,14 @@ void drawTriangle(u_char size, u_int colorBGR);
  */
 void drawDiamondInsideSquare(u_char colMin, u_char rowMin, u_char size, u_int colorBGR);
 
+/**
+ * Draw trapezoid
+ * 
+ * \param colMin Column start
+ * \param rowMin Row start 
+ * \param colorBGR Color of shape in BGR
+ * 
+ */
 void trapezoid(u_char colMin, u_char rowMin, u_int colorBGR);
 
 
